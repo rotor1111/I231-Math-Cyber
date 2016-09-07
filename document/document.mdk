@@ -1,0 +1,73 @@
+Title         : Homework 0
+Title Note    : Due on Sept 7 Wednesday
+Author        : Alex Choi
+Email         : jc78@indiana.edu
+Doc class     : [11pt]article
+
+~ MathDefs
+\newcommand{\jacobi}[2]{\ensuremath{\left(\frac{#1}{#2}\right)}}
+~
+
+
+[TITLE]
+
+# Basic Text Typewriting.
+
+Here is a list:
+
+* item 1
+* item 2
+* item 3
+* subscripting: Black_pit; superscripting: Blue
+
+This is a **Boldface words**. Newly introduced notion will be emphasized in italic font such as *group theory*. We could also add boldface to it, e.g., **group theory***.
+
+Mathematics can be inlined like XXX. Or, they can be elegantly presented in standalone blocks like below:
+~ Equation { #euler-thm }
+e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n  
+~ 
+
+The above theorem can be referenced as Equation X. We may prove it as a theorem:
+
+~ Theorem {#th-euler; caption:"Euler's theorem" }
+XXX
+~
+
+
+# Basics of typesetting code 
+
+Below is a Javascript program snippet   
+``` javascript
+function hello() {
+  return "hello world!"
+}
+```
+
+Here is the Java code we mentioned in the first lecture:
+``` java
+int toal = 0;
+for (int i = 1; i <= 10; i++)
+  total = total + i;    
+```
+
+
+And typing up Haskell is as easy:
+
+``` Haskell
+f :: [Int] -> [Int]
+f []     = []
+f (x:xs) = f ys ++ [x] ++ f zs
+  where
+    ys = [a | a  xs, a  x]
+    zs = [b | b  xs, b > x]  
+```
+~ Note
+The syntax highlighting works in the PDF output too.
+~
+
+# Practice Save and Load.
+
+
+# More Reading
+
+Read Section 3 and 4 of Madoko reference manual. Describe two of your favorite features that we didn't mention in class.
