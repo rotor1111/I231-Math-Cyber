@@ -1,0 +1,98 @@
+Title         : Homework 0
+Title Note    : Due on Sept 7 Wednesday
+Author        : Alex Choi
+Email         : jc78@indiana.edu
+Doc class     : [11pt]article
+
+~ MathDefs
+\newcommand{\jacobi}[2]{\ensuremath{\left(\frac{#1}{#2}\right)}}
+~
+
+
+[TITLE]
+
+# Basic Text Typewriting.
+
+Here is a list:
+
+* item 1
+* item 2
+* item 3
+* subscripting: Black~pit~; superscripting: Blue^sky^
+
+This is a **Boldface words**. Newly introduced notion will be emphasized in italic font such as *group theory*. We could also add boldface to it, e.g., **_group theory_**.
+
+Mathematics can be inlined like XXX. Or, they can be elegantly presented in standalone blocks like below:
+~ Equation { #euler-thm }
+e = \lim_{n\to\infty} \left( 1 + \frac{1}{n} \right)^n  
+~ 
+
+The above theorem can be referenced as Equation (1). We may prove it as a theorem:
+
+~ Theorem {#th-euler; caption:"Euler's theorem" }
+ a^\φ(n)^ \≡ 1   mod _n_
+~
+
+
+# Basics of typesetting code 
+
+Below is a Javascript program snippet   
+``` javascript
+function hello() {
+  return "hello world!"
+}
+```
+
+Here is the Java code we mentioned in the first lecture:
+``` java
+int toal = 0;
+for (int i = 1; i <= 10; i++)
+  total = total + i;    
+```
+
+
+And typing up Haskell is as easy:
+
+``` Haskell
+f :: [Int] -> [Int]
+f []     = []
+f (x:xs) = f ys ++ [x] ++ f zs
+  where
+    ys = [a | a  xs, a  x]
+    zs = [b | b  xs, b > x]  
+```
+~ Note
+The syntax highlighting works in the PDF output too.
+~
+
+# Practice Save and Load.
+
+Synchronize and Pull your ongoing work (from github) as you are editing it.
+
+# More Reading
+
+Read Section 3 and 4 of Madoko reference manual. Describe two of your favorite features that we didn't mention in class.
+
+- one interesting point is that we can manually change the font style which is very similar to CSS.
+- The other thing is that we can also upload the picture. So I figured out it is very similar to HTML.
+
+# Hands-On
+
+Install the Haskell platform and try out examples we talked in class.
+Note down two of your favorite trials (you are especially encouraged to
+try out things we haven't talked about in class). You can copy the command line text-scripts and paste them between two lines of (identical number of) consecutive backquotes.
+`
+$ ghci
+GHCi, version 7.10.3: http://www.haskell.org/ghc/  :? for help
+Prelude λ> 
+`
+
+If you want nicer formatting, you could use
+```  {padding-left:1ex; padding-right:1ex; padding-top:.75ex; padding-bottom:.25ex; background-color:black; color:white; font-size:14pt }
+$ ghci
+GHCi, version 7.10.3: http://www.haskell.org/ghc/  :? for help
+Prelude λ> 
+```
+My two favorite attempts are:
+-  Prelude> [1, 3 .. 10] which returns 1,3,5,7,9
+-  Prelude> fst (1, 2) and it returns 1 since it is the 1st integer.
